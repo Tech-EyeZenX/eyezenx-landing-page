@@ -4,7 +4,7 @@ import { CircularText } from './CircularText';
 
 
 export function About() {
-  
+
     return (
         <section className="relative w-full min-h-screen bg-gradient-to-b from-[#000212] via-[#0A1035] to-[#273297] overflow-hidden">
             {/* Animated background layer */}
@@ -71,9 +71,9 @@ export function About() {
                             transition={{ delay: 0.2 }}
                             className="text-lg md:text-xl leading-relaxed text-white/90"
                         >
-                            At Eyezenx Analytics Pvt Ltd, we believe the future of healthcare starts with early, 
-                            effortless diagnostics. Founded by visionary doctors with a passion for scalable, 
-                            tech-enabled solutions, we're reimagining how diseases are detected and managed—beginning 
+                            At Eyezenx Analytics Pvt Ltd, we believe the future of healthcare starts with early,
+                            effortless diagnostics. Founded by visionary doctors with a passion for scalable,
+                            tech-enabled solutions, we're reimagining how diseases are detected and managed—beginning
                             with the eye.
                         </motion.p>
 
@@ -83,9 +83,9 @@ export function About() {
                             transition={{ delay: 0.4 }}
                             className="text-lg md:text-xl leading-relaxed text-white/90"
                         >
-                            Our mission is to elevate patient outcomes through innovation that empowers clinicians, 
-                            connects care teams, and improves diagnostic timelines. We currently offer two flagship 
-                            platforms: Eyezenx Connect and Eyezenx Next—each designed to meet vital needs in modern 
+                            Our mission is to elevate patient outcomes through innovation that empowers clinicians,
+                            connects care teams, and improves diagnostic timelines. We currently offer two flagship
+                            platforms: Eyezenx Connect and Eyezenx Next—each designed to meet vital needs in modern
                             healthcare delivery.
                         </motion.p>
                     </div>
