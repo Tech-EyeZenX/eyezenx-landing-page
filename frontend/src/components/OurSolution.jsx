@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button";
+import SolutionCard1 from './SolutionCard1';
+import SolutionCard2 from './SolutionCard2';
+
+
 
 const solutions = [
   {
@@ -40,75 +44,25 @@ export function OurSolution() {
       <div>
 
       </div>
-      <div className="flex flex-col gap-6 max-w-5xl  mx-auto">
+      <div className="flex flex-col w-full space-y-2">
         {solutions.map((solution, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="group relative flex flex-col md:flex-row"
+            className="group relative flex flex-col md:flex-row" 
           >
-            {/* Text Section */}
-            <div
-              className="flex-1 p-12 bg-[#1A2356] relative z-10 rounded-4xl"
-              style={{
-                clipPath: 'polygon(0 0, 75% 0, 100% 100%, 0% 100%)'
-              }}
-            >
-              <div className="max-w-[150px]">
-                <h3 className="text-xl  mb-6 text-white">
-                  Vision testing on the<br />
-                  <span className="text-white text-3]xl">Latest equipment</span>
-                </h3>
-
-
-              </div>
-            </div>
-
-            {/* Image Section */}
-            <div
-              className="md:w-[65%] relative -ml-[1px] flex bg-[#1A2356] rounded-4xl"
-              style={{
-                clipPath: 'polygon(0% 0, 100% 0, 100% 100%, 20%  100%)'
-              }}
-            >
-              {/* Content Wrapper */}
-              <div className="relative z-10 p-12 flex-1">
-                <div className="mb-8 px-12">
-                  <h4 className="text-2xl font-bold mb-4">{solution.title}</h4>
-                  <p className="text-white/80 leading-relaxed">
-                    {solution.description}
-                  </p>
-                  <Button
-                    className="mt-6 bg-transparent border-2 border-white/30 hover:border-white/50 hover:bg-white/10  py-6 rounded-full"
-                  >
-                    Visit us
-                    <span className="ml-3 opacity-70 group-hover:opacity-100 transition-opacity">→</span>
-                  </Button>
-                </div>
-              </div>
-
-              <div className='flex'>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="h-[50vh] bg-gradient-to-tr from-[#FFDB3B]/20 to-[#8F51EA]/20 rounded-2xl"
-                  style={{
-                    clipPath: 'polygon(60% 0, 100% 0, 100% 100%, 0% 100%)'
-                  }}
-                >
-                  <img
-                    src={solution.image}
-                    alt={solution.title}
-                    className="h-full w-full object-cover mix-blend-luminosity"
-                  />
-                </motion.div>
-
-              </div>
-            </div>
+            <SolutionCard1 />
+            <SolutionCard2
+              image={solution.image}
+              title={solution.title}
+              description={solution.description}
+            />
           </motion.div>
         ))}
       </div>
+
 
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
