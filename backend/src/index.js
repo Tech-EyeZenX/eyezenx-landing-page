@@ -6,6 +6,7 @@ import logger from './middlewares/logger.middlewares.js';
 import { dbConnection } from './config/dbConnection.js';
 import DoctorRouter from './routes/doctor.route.js';
 import ShopOwnerRouter from './routes/shopowner.routes.js';
+import AdminRouter from './routes/admin.route.js';
 
 
 dotenv.config();
@@ -24,6 +25,7 @@ dbConnection();
 
 app.use('/api/v1/doctor', DoctorRouter);
 app.use('/api/v1/shopowner', ShopOwnerRouter);
+app.use('/api/v1/admin', AdminRouter);
 
 app.use((err, req, res, next) => {
     logger.error(err.stack);
