@@ -4,20 +4,24 @@ import helmet from 'helmet';
 import cors from 'cors';
 import logger from './middlewares/logger.middlewares.js';
 import { dbConnection } from './config/dbConnection.js';
+import DoctorRouter from './routes/doctor.route.js';
 
 
 dotenv.config();
 const app = express();
 
 const port = process.env.PORT || 3000;
-dbConnection();
-app.use(helmet());
-
-app.use(cors());
-
 app.use(express.json());
-
+app.use(helmet());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
+dbConnection();
+
+
+
+// Routes
+
+app.use('/api/v1/doctor', DoctorRouter);
 
 app.use((err, req, res, next) => {
     logger.error(err.stack);
