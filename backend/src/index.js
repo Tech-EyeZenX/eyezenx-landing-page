@@ -3,13 +3,14 @@ import express from 'express';
 import helmet from 'helmet';
 import cors from 'cors';
 import logger from './middlewares/logger.middlewares.js';
+import { dbConnection } from './config/dbConnection.js';
 
 
 dotenv.config();
 const app = express();
 
 const port = process.env.PORT || 3000;
-
+dbConnection();
 app.use(helmet());
 
 app.use(cors());
@@ -25,6 +26,6 @@ app.use((err, req, res, next) => {
     });
 });
 
-app.listen(port, ()=>{
+app.listen(port, () => {
     logger.info(`Server running on port ${port}`);
 })
