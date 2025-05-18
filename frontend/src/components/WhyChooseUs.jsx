@@ -3,6 +3,7 @@ import IconComponent from "./IconComponent";
 import GlassCard from "./GlassCard";
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 const features = [
     {
         title: "Non-Invasive, Early Diagnostics",
@@ -38,7 +39,7 @@ const containerVariants = {
 };
 
 const itemVariants = {
-    hidden: { y: 40, opacity: 0, scale: 0.9 },
+    hidden: { y: 20, opacity: 0, scale: 0.95 },
     visible: {
         y: 0,
         opacity: 1,
@@ -46,30 +47,43 @@ const itemVariants = {
         transition: {
             type: "spring",
             stiffness: 100,
-            damping: 20
+            damping: 15
         }
     }
 };
 
 export default function WhyChooseUs() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
     return (
-        <section className="relative py-20 px-6 md:px-54  md:px--54 bg-gradient-to-b from-[#0F1B50] to-[#1E2A78] text-white overflow-hidden">
+        <section className="relative py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#0F1B50] to-[#1E2A78] text-white overflow-hidden">
+            {/* Section Heading */}
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-16 relative z-10 px-4"
+                transition={{ duration: 0.4 }}
+                className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-6 sm:mb-10 relative z-10"
             >
                 Why Choose Us
             </motion.h2>
 
-            <div className="relative mb-8 md:mb-12 mx-auto max-w-7xl">
+            {/* Features Grid */}
+            <div className="relative mb-8 sm:mb-12 mx-auto max-w-6xl">
                 <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 relative z-10"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 relative z-10"
                     variants={containerVariants}
                     initial="hidden"
                     whileInView="visible"
-                    viewport={{ once: true, margin: "-100px" }}
+                    viewport={{ once: true, margin: "-50px" }}
                 >
                     {features.map((feature, index) => (
                         <motion.div
@@ -81,13 +95,16 @@ export default function WhyChooseUs() {
                         >
                             <Card
                                 className="relative bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 ease-out group"
-                                style={{ clipPath: feature.clipPath }}
+                                style={{
+                                    clipPath: !isMobile ? feature.clipPath : 'none'
+                                }}
+
                             >
-                                <CardHeader className="p-4 md:p-6">
-                                    <CardTitle className="text-xl md:text-2xl font-bold mb-1 md:mb-2 px-6 md:px-12">
+                                <CardHeader className="p-4 sm:p-5 md:p-6">
+                                    <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 px-4 sm:px-6">
                                         {feature.title}
                                     </CardTitle>
-                                    <CardDescription className="text-sm md:text-base text-white/80 px-6 md:px-12">
+                                    <CardDescription className="text-xs sm:text-sm md:text-base text-white/70 px-4 sm:px-6">
                                         {feature.description}
                                     </CardDescription>
                                 </CardHeader>
@@ -102,7 +119,7 @@ export default function WhyChooseUs() {
                 {/* Animated Center Icon */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
                     <motion.div
-                        className="w-32 h-32 md:w-50 md:h-50 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center"
+                        className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 bg-white/10 backdrop-blur-lg rounded-full flex items-center justify-center"
                         initial={{ scale: 0, rotate: -45 }}
                         whileInView={{
                             scale: 1,
@@ -115,7 +132,7 @@ export default function WhyChooseUs() {
                         }}
                         viewport={{ once: true }}
                         animate={{
-                            y: [-5, 5, -5],
+                            y: [-3, 3, -3],
                             transition: {
                                 duration: 4,
                                 repeat: Infinity,
@@ -123,13 +140,13 @@ export default function WhyChooseUs() {
                             }
                         }}
                     >
-                        <IconComponent className="h-16 w-16 md:h-24 md:w-24 text-blue-300 animate-pulse" />
+                        <IconComponent className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 text-blue-300 animate-pulse" />
                     </motion.div>
                 </div>
             </div>
 
             {/* Vision Section */}
-            <div className="text-center py-8 md:py-12 space-y-8 md:space-y-12 max-w-4xl mx-auto relative">
+            <div className="text-center py-6 sm:py-8 md:py-12 space-y-6 sm:space-y-8 max-w-2xl md:max-w-4xl mx-auto relative px-4">
                 <motion.div
                     initial={{ scale: 0.95 }}
                     whileInView={{ scale: 1 }}
@@ -139,8 +156,8 @@ export default function WhyChooseUs() {
                     <Button
                         asChild
                         variant="glass"
-                        size="lg"
-                        className="rounded-full backdrop-blur-lg border-2 border-white/20 hover:border-white/40 transition-colors text-white bg-white/10 hover:bg-white/20"
+                        size="sm"
+                        className="rounded-full backdrop-blur-lg border border-white/20 hover:border-white/40 transition-colors text-white bg-white/10 hover:bg-white/20 text-sm sm:text-base"
                     >
                         <motion.button
                             whileHover={{ scale: 1.05 }}
@@ -155,7 +172,7 @@ export default function WhyChooseUs() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="text-lg md:text-xl font-medium italic px-4"
+                    className="text-base sm:text-lg md:text-xl font-medium italic text-white/90 leading-relaxed"
                 >
                     "To democratize early diagnostics and empower a connected healthcare ecosystem, one patient at a time."
                 </motion.blockquote>
@@ -167,7 +184,7 @@ export default function WhyChooseUs() {
                     transition={{ duration: 1 }}
                     className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none w-full"
                 >
-                    <h2 className="text-[clamp(2.5rem,20vw,10rem)] font-black tracking-tighter text-center bg-gradient-to-r from-white to-[#8F51EA] bg-clip-text text-transparent leading-[0.8]">
+                    <h2 className="text-[clamp(2rem,18vw,8rem)] sm:text-[clamp(2.5rem,20vw,10rem)] font-black tracking-tighter text-center bg-gradient-to-r from-white to-[#8F51EA] bg-clip-text text-transparent leading-[0.8]">
                         EVOLUTION
                     </h2>
                 </motion.div>
@@ -177,9 +194,9 @@ export default function WhyChooseUs() {
                     initial={{ scaleX: 0 }}
                     whileInView={{ scaleX: 1 }}
                     transition={{ duration: 1, ease: "circOut" }}
-                    className="h-px w-full bg-gradient-to-r from-transparent via-white/50 to-transparent"
+                    className="h-px w-full bg-gradient-to-r from-transparent via-white/30 to-transparent"
                 />
             </div>
-        </section>
+        </section >
     );
 }

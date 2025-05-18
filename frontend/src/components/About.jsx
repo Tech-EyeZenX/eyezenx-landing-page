@@ -17,7 +17,7 @@ export function About() {
 
             {/* Floating grid pattern */}
             <div className="absolute inset-0 opacity-10">
-                <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]" />
+                <div className="h-full w-full bg-[linear-gradient(to_right,#80808012_1px,transparent_2px),linear-gradient(to_bottom,#80808012_2px,transparent_1px)] bg-[size:30px_30px]" />
             </div>
 
             {/* Content container */}
@@ -29,7 +29,7 @@ export function About() {
                     transition={{ duration: 1 }}
                     className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
                 >
-                    <h2 className="text-[clamp(3rem,30vw,16rem)] font-black tracking-tighter text-center bg-gradient-to-r from-white to-[#8F51EA] bg-clip-text text-transparent">
+                    <h2 className="text-[clamp(2rem,18vw,12rem)] md:text-[clamp(3rem,30vw,16rem)] font-bold md:font-black tracking-tight md:tracking-tighter text-center bg-gradient-to-r from-white to-[#8F51EA] bg-clip-text text-transparent">
                         EVIDENCE
                     </h2>
                 </motion.div>
@@ -96,9 +96,9 @@ export function About() {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ type: "spring", delay: 0.6 }}
-                    className="mt-16 md:mt-24"
+                    className="mt-8 sm:mt-12 md:mt-16 lg:mt-24"
                 >
-                    <CircularText className="w-[min(80vw,400px)] h-[min(80vw,400px)]" />
+                    <CircularText className="w-[min(90vw,300px)] h-[min(90vw,300px)] sm:w-[min(80vw,350px)] sm:h-[min(80vw,350px)] md:w-[min(80vw,400px)] md:h-[min(80vw,400px)]" />
                 </motion.div>
             </div>
         </section>

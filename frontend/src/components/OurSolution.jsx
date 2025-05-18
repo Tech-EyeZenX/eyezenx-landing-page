@@ -3,8 +3,6 @@ import { Button } from "@/components/ui/button";
 import SolutionCard1 from './SolutionCard1';
 import SolutionCard2 from './SolutionCard2';
 
-
-
 const solutions = [
   {
     title: 'EyezenX Connect',
@@ -22,66 +20,85 @@ const solutions = [
 
 export function OurSolution() {
   return (
-    <section className="relative py-20 px-6 md:px-20 bg-gradient-to-b from-[#0F1B50] to-[#1E2A78] text-white overflow-hidden">
+    <section className="relative py-12 md:py-20 px-4 md:px-20 bg-gradient-to-b from-[#0F1B50] to-[#1E2A78] text-white overflow-hidden">
+      {/* Main Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-bold text-center mb-16"
+        viewport={{ once: true, margin: "-20% 0px" }}
+        className="text-3xl md:text-5xl font-bold text-center mb-8 md:mb-16"
       >
         Our Solutions
       </motion.h2>
+
+      {/* Background Text */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 0.05, y: 0 }}
+        whileInView={{ opacity: 0.05, y: 0 }}
         transition={{ duration: 1 }}
-        className="absolute top-[90%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        viewport={{ once: true }}
+        className="absolute top-[85%] md:top-[90%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none w-full"
       >
-        <h2 className="text-[clamp(3rem,30vw,16rem)] font-black tracking-tighter text-center bg-gradient-to-r from-white to-[#8F51EA] bg-clip-text text-transparent">
+        <h2 className="text-[clamp(2rem,20vw,14rem)] md:text-[clamp(3rem,30vw,16rem)] font-black tracking-tighter text-center bg-gradient-to-r from-white to-[#8F51EA] bg-clip-text text-transparent">
           ESSENTIAL
         </h2>
       </motion.div>
-      <div>
 
-      </div>
-      <div className="flex flex-col w-full space-y-2">
+      {/* Solutions Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-6xl mx-auto">
         {solutions.map((solution, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            className="group relative flex flex-col md:flex-row" 
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.2,
+              type: "spring",
+              stiffness: 100
+            }}
+            viewport={{ once: true, margin: "-10% 0px" }}
+            className="group relative w-full"
           >
-            <SolutionCard1 />
-            <SolutionCard2
-              image={solution.image}
-              title={solution.title}
-              description={solution.description}
-            />
+            <div className="flex flex-row  h-full bg-white/5  rounded-2xl overflow-hidden  transition-all">
+              <div className='hidden md:flex'>
+                <SolutionCard1  />
+              </div>
+
+              <div className='flex'>
+                <SolutionCard2
+                  image={solution.image}
+                  title={solution.title}
+                  description={solution.description}
+                />
+              </div>
+
+            </div>
           </motion.div>
         ))}
       </div>
 
-
-      {/* Background Elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        {[...Array(8)].map((_, i) => (
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {[...Array(6)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-24 bg-white/10"
+            className="absolute w-1 h-16 md:h-24 bg-white/10"
             initial={{ opacity: 0 }}
             animate={{
-              opacity: [0, 0.5, 0],
-              y: [0, -100],
-              x: Math.random() * 100 - 50
+              opacity: [0, 0.3, 0],
+              y: [0, -window.innerHeight * 0.5],
+              x: Math.random() * 100 - 50 + '%'
             }}
             transition={{
-              duration: Math.random() * 4 + 4,
+              duration: Math.random() * 6 + 4,
               repeat: Infinity,
-              delay: Math.random() * 2
+              delay: Math.random() * 2,
+              ease: "linear"
             }}
             style={{
+              left: Math.random() * 100 + '%',
               clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)'
             }}
           />

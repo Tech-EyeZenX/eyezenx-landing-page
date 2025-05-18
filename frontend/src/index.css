@@ -151,3 +151,15 @@
     0% { background-position: -100% 0; }
     100% { background-position: 200% 0; }
 }
+
+@supports (backdrop-filter: blur(12px)) {
+    .backdrop-blur-xl {
+        backdrop-filter: blur(12px);
+    }
+}
+
+@media (min-width: 768px) {
+  .desktop-clip-path {
+    clip-path: var(--feature-clip-path);
+  }
+}
