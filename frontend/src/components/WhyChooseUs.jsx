@@ -65,7 +65,7 @@ export default function WhyChooseUs() {
         return () => window.removeEventListener('resize', checkMobile);
     }, []);
     return (
-        <section className="relative py-12 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#0F1B50] to-[#1E2A78] text-white overflow-hidden">
+        <section className="relative py-20 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#0F1B50] to-[#1E2A78] text-white overflow-hidden">
             {/* Section Heading */}
             <motion.h2
                 initial={{ opacity: 0, y: -20 }}

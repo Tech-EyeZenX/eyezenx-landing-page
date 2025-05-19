@@ -163,3 +163,34 @@
     clip-path: var(--feature-clip-path);
   }
 }
+
+@keyframes gradient-rotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes scanline {
+  0% { background-position: 0 200%; }
+  100% { background-position: 0 -200%; }
+}
+
+.animate-gradient-rotate {
+  animation: gradient-rotate 12s linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin 8s linear infinite;
+}

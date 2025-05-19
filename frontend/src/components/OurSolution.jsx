@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Button } from "@/components/ui/button";
 import SolutionCard1 from './SolutionCard1';
 import SolutionCard2 from './SolutionCard2';
+import { AutoCarousel } from './AutoCarousel';
 
 const solutions = [
   {
@@ -40,43 +41,28 @@ export function OurSolution() {
         viewport={{ once: true }}
         className="absolute top-[85%] md:top-[90%] left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none w-full"
       >
-        <h2 className="text-[clamp(2rem,20vw,14rem)] md:text-[clamp(3rem,30vw,16rem)] font-black tracking-tighter text-center bg-gradient-to-r from-white to-[#8F51EA] bg-clip-text text-transparent">
+        <h2 className="text-[clamp(2rem,20vw,14rem)] md:text-[clamp(3rem,30vw,16rem)] font-black tracking-tighter text-center bg-gradient-to-r from-white to-[#8F51EA] bg-clip-text text-transparent pb-30">
           ESSENTIAL
         </h2>
       </motion.div>
 
       {/* Solutions Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-6xl mx-auto">
-        {solutions.map((solution, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.2,
-              type: "spring",
-              stiffness: 100
-            }}
-            viewport={{ once: true, margin: "-10% 0px" }}
-            className="group relative w-full"
-          >
-            <div className="flex flex-row  h-full bg-white/5  rounded-2xl overflow-hidden  transition-all">
-              <div className='hidden md:flex'>
-                <SolutionCard1  />
-              </div>
-
-              <div className='flex'>
-                <SolutionCard2
-                  image={solution.image}
-                  title={solution.title}
-                  description={solution.description}
-                />
-              </div>
-
-            </div>
-          </motion.div>
-        ))}
+      <div className="grid grid-cols-1 gap-8 max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            type: "spring",
+            stiffness: 100
+          }}
+          viewport={{ once: true, margin: "-10% 0px" }}
+          className="w-full"
+        >
+          <div className="flex flex-row w-full h:[400px] md:h-[450px] bg-white/5 rounded-2xl overflow-hidden transition-all">
+            <AutoCarousel solutions={solutions} />
+          </div>
+        </motion.div>
       </div>
 
       {/* Animated Background Elements */}
