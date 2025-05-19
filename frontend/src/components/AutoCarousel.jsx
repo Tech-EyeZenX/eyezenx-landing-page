@@ -9,7 +9,7 @@ export const AutoCarousel = ({ solutions }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex(prev => (prev + 1) % solutions.length);
-        }, 1000);
+        }, 2000);
         return () => clearInterval(interval);
     }, [solutions.length]);
 

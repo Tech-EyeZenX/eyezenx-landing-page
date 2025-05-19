@@ -45,6 +45,10 @@ const doctorSchema = new mongoose.Schema({
     shopId: { 
         type: mongoose.Schema.Types.ObjectId,
         ref: "OpticalShop" 
+    },
+    availability: {
+        type: Boolean,
+        default: true
     }
 });
 
