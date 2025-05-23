@@ -4,6 +4,7 @@ import FAQSection from "../components/Faq";
 import Footer from "../components/Footer";
 import { Hero } from "../components/Hero";
 import { OurSolution } from "../components/OurSolution";
+import { Team } from "../components/Team";
 import WhyChooseUs from "../components/WhyChooseUs";
 
 
@@ -15,6 +16,7 @@ export function Home() {
       <About />
       <OurSolution/>
       <WhyChooseUs/>
+      <Team/>
       <FAQSection/>
       <ContactForm/>
       <Footer/>

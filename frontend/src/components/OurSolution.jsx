@@ -21,7 +21,7 @@ const solutions = [
 
 export function OurSolution() {
   return (
-    <section className="relative py-12 md:py-20 px-4 md:px-20 bg-gradient-to-b from-[#0F1B50] to-[#1E2A78] text-white overflow-hidden">
+    <section className="relative min-h-screen py-12 md:py-20 px-4 md:px-20 bg-gradient-to-b from-[#0F1B50] to-[#1E2A78] text-white overflow-hidden">
       {/* Main Heading */}
       <motion.h2
         initial={{ opacity: 0, y: -20 }}
@@ -47,7 +47,7 @@ export function OurSolution() {
       </motion.div>
 
       {/* Solutions Grid */}
-      <div className="grid grid-cols-1 gap-8 max-w-6xl mx-auto">
+      <div className="gap-8 max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +59,7 @@ export function OurSolution() {
           viewport={{ once: true, margin: "-10% 0px" }}
           className="w-full"
         >
-          <div className="flex flex-row w-full h:[400px] md:h-[450px] bg-white/5 rounded-2xl overflow-hidden transition-all">
+          <div className="flex flex-row w-full h:[600px] md:h-[450px] bg-white/5 rounded-2xl overflow-hidden transition-all">
             <AutoCarousel solutions={solutions} />
           </div>
         </motion.div>
