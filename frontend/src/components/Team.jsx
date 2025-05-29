@@ -6,16 +6,16 @@ import { Linkedin } from "lucide-react";
 
 const team = [
     {
-        "desigination": "Co-founder",
-        "about": "Visionary health-tech entrepreneur driving the strategic and technical evolution of EyeZenX. Leads product architecture, and long-term innovation strategy.",
-        "name": "Mr. Keerthi Easwar",
+        "desigination": "Founder",
+        "about": "Healthcare innovator using medical expertise to drive evidence-based R&D and transformative solutions at EyeZenX. Leads product architecture and long-term strategy to shape the future of whole-person care.",
+        "name": "Keerthi Easwar",
         "image": "./keerti-profile-pic.jpg",
         "linkedin": "https://www.linkedin.com/in/alex-carter"
     },
     {
-        "desigination": "Co-Founder",
+        "desigination": "Founder",
         "about": "Forward thinking Health-tech entrepreneur with a strong foundation in clinical workflows, operational strategy & Business development . Oversees implementation, partner onboarding, and execution across EyeZenX deployments, ensuring a seamless interface between innovation and real-world impact.",
-        "name": "Mr. Selvamuthukumar",
+        "name": "Selvamuthukumar",
         "image": "./selvam-profile-pic.jpg",
         "linkedin": "https://www.linkedin.com/in/jordan-miles"
     },
@@ -41,11 +41,26 @@ const team = [
         "linkedin": "https://www.linkedin.com/in/emily-zhang"
     },
     {
-         "desigination": "Angel Investor & Strategic Advisor",
+         "desigination": "Interim CTO ",
         "about": "Entrepreneur and early-stage investor with a strong track record in scaling tech startups. Advises EyeZenX on market positioning, business model refinement, and global expansion.",
         "name": "Mr. Govind Kumar",
-        "image": "https://images.unsplash.com/photo-1695927621677-ec96e048dce2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "image": "./govind-profile.jpg",
         "linkedin": "https://www.linkedin.com/in/emily-zhang"
+    },
+    {
+         "desigination": "Software Engineer",
+         "about" : "Software engineer with a strong background in AI, machine learning, and DevOps. Specialised in building intelligent systems and deploying scalable, reliable infrastructure to support Eyezen’s modern software solutions.",
+         "name":"Aakarsh Yohaan Ravi",
+         "image":"./akarsh-profile.jpg",
+         "linkedin": "https://www.linkedin.com/in/emily-zhang"
+    },
+    {
+          "desigination":"Full Stack Developer",
+          "about":"Full Stack Developer with expertise in building scalable web applications. Specializes in creating user-friendly interfaces and robust backend systems to enhance EyeZenX’s digital health solutions.",
+          "name":"Nilesh Tiwari",
+          "image":"./nilesh-profile-pic.png",
+          "linkedin": "https://www.linkedin.com/in/nilesh-tiwari-bbb685215/"
+
     }
 ];
 
