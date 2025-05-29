@@ -101,7 +101,7 @@ export default function WhyChooseUs() {
 
                             >
                                 <CardHeader className="p-4 sm:p-5 md:p-6">
-                                    <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 px-4 sm:px-6">
+                                    <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 px-4 sm:px-6 text-white">
                                         {feature.title}
                                     </CardTitle>
                                     <CardDescription className="text-xs sm:text-sm md:text-base text-white/70 px-4 sm:px-6">
