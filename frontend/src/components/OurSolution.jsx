@@ -6,16 +6,16 @@ import { AutoCarousel } from './AutoCarousel';
 
 const solutions = [
   {
-    title: 'EyezenX Connect',
-    description: 'It’s how primary eye care and specialty medicine should always have worked—together.',
+    id:1,
+    description: 'Turning optical shops into intelligent eye screening hubs.',
     image: '/eye-women.png',
     link: '#'
   },
   {
-    title: 'EyezenX Next',
-    description: 'AI-powered diagnostic platform that uses high-resolution fundus imaging combined with key external parameters.',
-    image: '/exray-women.png',
-    link: '#'
+    id:2,
+    description: "EyeZenX Next is a multi-modal, AI-powered platform that combines retinal imaging and clinical markers to detect chronic and neurological diseases early—non- invasively and at scale.",
+    image: '/eyezennext.png',
+  link: '#'
   }
 ];
 

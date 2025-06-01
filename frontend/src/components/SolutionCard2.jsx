@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-const SolutionCard2 = ({ title, description, image, link }) => (
+const SolutionCard2 = ({ id, description, image, link }) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.95 }}
     whileInView={{ opacity: 1, scale: 1 }}
@@ -22,7 +22,7 @@ const SolutionCard2 = ({ title, description, image, link }) => (
       >
         <img
           src={image}
-          alt={title}
+          alt={"Solution Image"}
           className="w-full h-full object-cover object-center aspect-[3/2] transform transition-transform duration-500 group-hover:scale-105 saturate-110 contrast-125"
           loading="lazy"
         />
@@ -46,19 +46,10 @@ const SolutionCard2 = ({ title, description, image, link }) => (
           className="relative"
         >
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-200 to-purple-300 bg-clip-text text-transparent mb-2 md:mb-4 leading-tight">
-            <span className="block text-lg md:text-2xl font-medium mb-1 md:mb-2">Visiting testing on the</span>
-            Latest equipment
+            <span className="block text-lg md:text-4xl font-medium mb-1 md:mb-2">Introducing EyeZenX</span>
+            {id===1?"Connect":"Next"}
           </h2>
         </motion.div>
-
-        <motion.h3
-          initial={{ y: 10, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="text-xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-300 to-purple-400 bg-clip-text text-transparent mt-1 md:mt-2 drop-shadow"
-        >
-          {title}
-        </motion.h3>
 
         <motion.p
           initial={{ opacity: 0 }}
@@ -75,7 +66,7 @@ const SolutionCard2 = ({ title, description, image, link }) => (
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
         transition={{ delay: 0.4 }}
-        className="mt-4 md:mt-8 relative"
+        className="mt-4 md:mt-18 relative"
         style={{
           position: 'static', // Reset positioning
           marginTop: 'auto', // Push to bottom

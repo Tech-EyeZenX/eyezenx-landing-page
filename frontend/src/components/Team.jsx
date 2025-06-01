@@ -10,21 +10,21 @@ const team = [
         "about": "Healthcare innovator using medical expertise to drive evidence-based R&D and transformative solutions at EyeZenX. Leads product architecture and long-term strategy to shape the future of whole-person care.",
         "name": "Keerthi Easwar",
         "image": "./keerti-profile-pic.jpg",
-        "linkedin": "https://www.linkedin.com/in/alex-carter"
+        "linkedin": "https://www.linkedin.com/in/keerthi-easwar-915124233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
     },
     {
         "desigination": "Founder",
         "about": "Forward thinking Health-tech entrepreneur with a strong foundation in clinical workflows, operational strategy & Business development . Oversees implementation, partner onboarding, and execution across EyeZenX deployments, ensuring a seamless interface between innovation and real-world impact.",
         "name": "Selvamuthukumar",
         "image": "./selvam-profile-pic.jpg",
-        "linkedin": "https://www.linkedin.com/in/jordan-miles"
+        "linkedin": "https://www.linkedin.com/in/smkashok/"
     },
     {
         "desigination": "Head of Medical Research",
         "about": "Medical research lead overseeing clinical validation and disease model development. Spearheads translational research across neurological, systemic, and ocular conditions.",
         "name": "Dr. Oveyaa ",
         "image": "Oveyaa-profile-pic.jpg",
-        "linkedin": "https://www.linkedin.com/in/samira-khan"
+        "linkedin": "https://www.linkedin.com/in/oveyaa-eswaran-349469199?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app "
     },
     {
         "desigination": "Consultant Cardiologist & Strategic Advisor",
@@ -38,21 +38,21 @@ const team = [
         "about": "Core engineering force behind EyeZenX’s platforms.Leads Product integration, and performance optimization across Connect and Next modules",
         "name": "Mr. Surendra Kumar ",
         "image": "./Surendra-profile-pic.jpg",
-        "linkedin": "https://www.linkedin.com/in/emily-zhang"
+        "linkedin": "https://www.linkedin.com/in/surendra-kumar-c"
     },
     {
          "desigination": "Interim CTO ",
         "about": "Entrepreneur and early-stage investor with a strong track record in scaling tech startups. Advises EyeZenX on market positioning, business model refinement, and global expansion.",
         "name": "Mr. Govind Kumar",
         "image": "./govind-profile.jpg",
-        "linkedin": "https://www.linkedin.com/in/emily-zhang"
+        "linkedin": "https://www.linkedin.com/in/aigovindkumar/"
     },
     {
          "desigination": "Software Engineer",
          "about" : "Software engineer with a strong background in AI, machine learning, and DevOps. Specialised in building intelligent systems and deploying scalable, reliable infrastructure to support Eyezen’s modern software solutions.",
          "name":"Aakarsh Yohaan Ravi",
          "image":"./akarsh-profile.jpg",
-         "linkedin": "https://www.linkedin.com/in/emily-zhang"
+         "linkedin": "https://www.linkedin.com/in/aakarsh-yohaan-54642b253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
     },
     {
           "desigination":"Full Stack Developer",
@@ -88,7 +88,7 @@ export function Team() {
             transition={{ delay: 0.3 }}
             className="text-xl md:text-2xl text-muted font-light max-w-2xl mx-auto"
           >
-            The brilliant minds revolutionizing eye care through technology
+            The brilliant minds revolutionizing healthcare through technology.
           </motion.p>
         </motion.div>
 

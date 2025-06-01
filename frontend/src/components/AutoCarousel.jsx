@@ -63,7 +63,7 @@ export const AutoCarousel = ({ solutions }) => {
                             }}
                         >
                             <SolutionCard2
-                                title={solution.title}
+                                id={solution.id}
                                 description={solution.description}
                                 image={solution.image}
                                 link={solution.link}
