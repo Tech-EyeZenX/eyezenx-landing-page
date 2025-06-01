@@ -8,22 +8,22 @@ const features = [
     {
         title: "Non-Invasive, Early Diagnostics",
         description: "Disease detection before symptoms surface.",
-        clipPath: `path('M537.694 0.714844C546.531 0.715009 553.694 7.87842 553.694 16.7148V72.4925C553.694 88.5953 540.5 101.305 525.802 107.884C505.834 116.823 489.778 134.16 481.251 155.913C475.595 170.34 463.134 182.445 447.638 182.445H16.8184C7.9818 182.445 0.818359 175.282 0.818359 166.445V16.7148C0.818376 7.8783 7.98182 0.714846 16.8184 0.714844H537.694Z')`
+        clipPath: `path('M537.694 0.715088C546.531 0.715253 553.694 7.87866 553.694 16.7151V72.4927C553.694 88.5956 540.5 101.306 525.802 107.885C505.834 116.823 489.778 134.16 481.251 155.913C475.595 170.34 463.134 182.446 447.638 182.446H16.8184C7.9818 182.446 0.818359 175.282 0.818359 166.446V16.7151C0.818376 7.87855 7.98182 0.71509 16.8184 0.715088H537.694Z')`
     },
     {
         title: "Seamless Clinical Communication",
         description: "Real-time referrals and feedback loops.",
-        clipPath: `path('M16.124 0.714844C7.2876 0.714983 0.124023 7.8784 0.124023 16.7148V72.4925C0.124023 88.5953 13.3184 101.305 28.0159 107.884C47.9843 116.823 64.0399 134.16 72.5675 155.913C78.2229 170.34 90.6847 182.445 106.18 182.445H537C545.837 182.445 553 175.282 553 166.445V16.7148C553 7.87832 545.837 0.714871 537 0.714844H16.124Z')`
+        clipPath: `path('M16.124 0.715088C7.2876 0.715227 0.124023 7.87864 0.124023 16.7151V72.4927C0.124023 88.5956 13.3184 101.306 28.0159 107.885C47.9843 116.823 64.0399 134.16 72.5675 155.913C78.2229 170.34 90.6847 182.446 106.18 182.446H537C545.837 182.446 553 175.282 553 166.446V16.7151C553 7.87856 545.837 0.715115 537 0.715088H16.124Z')`
     },
     {
         title: "AI-Enhanced Precision",
         description: "Data-driven insights for accurate diagnoses.",
-        clipPath: `path('M537.704 182C546.54 182 553.704 174.837 553.704 166V110.222C553.704 94.1195 540.509 81.4095 525.812 74.8303C505.844 65.8918 489.789 48.5553 481.261 26.8017C475.606 12.3751 463.144 0.269531 447.648 0.269531H16.8278C7.99128 0.269623 0.827759 7.43303 0.827759 16.2695V166C0.827759 174.836 7.99128 182 16.8278 182H537.704Z')`
+        clipPath: `path('M537.704 182C546.54 182 553.704 174.837 553.704 166V110.222C553.704 94.1195 540.509 81.4095 525.812 74.8303C505.844 65.8918 489.788 48.5553 481.261 26.8017C475.606 12.3751 463.144 0.269531 447.648 0.269531H16.8276C7.99116 0.269623 0.827637 7.43303 0.827637 16.2695V166C0.827637 174.836 7.99116 182 16.8276 182H537.704Z')`
     },
     {
         title: "Scalable & Compliant",
         description: "Built for modern clinics and compliant with privacy laws.",
-        clipPath: `path('M16 182C7 182 0 174.837 0 166V110.222C0 94.1195 13.195 81.4095 27.8916 74.8303C47.8595 65.8918 63.915 48.5553 72.4429 26.8017C78.0983 12.3751 90.56 0.269531 106.056 0.269531H537.704C546.54 0.269531 553.704 7.43303 553.704 16.2695V166C553.704 174.836 546.54 182 537.704 182H16Z')`
+        clipPath: `path('M16.124 182C7.2876 182 .124 174.836.124 166V110.222C.124 94.1195 13.3184 81.4095 28.0159 74.8304 47.9843 65.8919 64.0399 48.5553 72.5675 26.8017 75-1 91-1 105-1H537C545.837.2696 553 7.433 553 16.2695V166C553 174.837 545.837 182 537 182H16.124Z')`
     }
 ];
 
@@ -101,10 +101,10 @@ export default function WhyChooseUs() {
 
                             >
                                 <CardHeader className="p-4 sm:p-5 md:p-6">
-                                    <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 px-4 sm:px-6 text-white">
+                                    <CardTitle className="text-lg sm:text-xl md:text-2xl font-semibold mb-1 sm:mb-2 px-4 sm:px-12 text-white">
                                         {feature.title}
                                     </CardTitle>
-                                    <CardDescription className="text-xs sm:text-sm md:text-base text-white/70 px-4 sm:px-6">
+                                    <CardDescription className="text-xs sm:text-sm md:text-base text-white/70 px-4 sm:px-12">
                                         {feature.description}
                                     </CardDescription>
                                 </CardHeader>
@@ -147,34 +147,15 @@ export default function WhyChooseUs() {
 
             {/* Vision Section */}
             <div className="text-center py-6 sm:py-8 md:py-12 space-y-6 sm:space-y-8 max-w-2xl md:max-w-4xl mx-auto relative px-4">
-                <motion.div
-                    initial={{ scale: 0.95 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ type: "spring", delay: 0.2 }}
-                    className="inline-block"
-                >
-                    <Button
-                        asChild
-                        variant="glass"
-                        size="sm"
-                        className="rounded-full backdrop-blur-lg border border-white/20 hover:border-white/40 transition-colors text-white bg-white/10 hover:bg-white/20 text-sm sm:text-base"
-                    >
-                        <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            About EyezenX
-                        </motion.button>
-                    </Button>
-                </motion.div>
+                
 
                 <motion.blockquote
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="text-base sm:text-lg md:text-xl font-medium italic text-white/90 leading-relaxed"
+                    className="text-base sm:text-lg md:text-3xl font-medium italic text-white/90 leading-relaxed"
                 >
-                    "To democratize early diagnostics and empower a connected healthcare ecosystem, one patient at a time."
+                    "AI Enabled Physician Verified Diagnosis"
                 </motion.blockquote>
 
                 {/* Animated Background Text */}

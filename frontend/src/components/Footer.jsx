@@ -49,9 +49,7 @@ export default function Footer() {
                     <div>
                         <h4 className="font-semibold mb-2">Contact Information</h4>
                         <ul className="text-gray-400 space-y-2">
-                            <li>Phone: +913456788</li>
-                            <li>Email: Nikhilreddy@Gmail.Com</li>
-                            <li>Address: 123 C, Gandhi Nagar, Madipakam, Chennai.</li>
+                            <li>Email: eyezenx@gmail.com</li>
                         </ul>
                     </div>
                 </div>
