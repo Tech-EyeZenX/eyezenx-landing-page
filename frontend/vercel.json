@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "eyezenx.com",
+      "destination": "https://www.eyezenx.com",
+      "permanent": true
+    }
+  ]
+}
